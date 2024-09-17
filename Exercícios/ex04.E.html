@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudança de estilo ao clicar</title>
+</head>
+<body>
+    <input type="button" value="Azul" onclick="azul()">
+    <input type="button" value="Vermelho" onclick="vermelho()">
+    <input type="button" value="Verde" onclick="verde()">
+
+    <script>
+        function azul(){
+            window.document.body.style.backgroundColor = 'blue'
+        }
+
+        function vermelho(){
+            window.document.body.style.backgroundColor = 'red'
+        }
+
+        function verde(){
+            window.document.body.style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+</html>

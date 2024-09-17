@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalize o conteúdo de um parágrafo</title>
+</head>
+<body>
+    <p id="tex">Texto Original</p>
+    <input type="button" value="Clique!" onclick="clique()">
+
+    <script>
+        function clique(){
+            var t = window.document.getElementById('tex')
+            t.innerText = 'Texto Modificado!'
+            t.style.color = 'blue'
+        }
+    </script>
+</body>
+</html>
