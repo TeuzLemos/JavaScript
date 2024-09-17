@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1: Interação com o mouse</title>
+    <style>
+        div#area {
+            width: 200px;
+            height: 200px;
+            background: green;
+            line-height: 200px;
+            text-align: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area">Interaja</div>
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clique)
+        area.addEventListener('mouseout', sair)
+        area.addEventListener('mouseenter', entrar)
+
+        function clique() {
+            area.style.background = 'red'
+            area.innerText = 'C L I C O U !'
+        }
+
+        function entrar() {
+            area.innerText = 'Entrou!'
+            area.style.background = 'blue'
+        }
+
+        function sair() {
+            area.style.background = 'yellow'
+            area.innerText = 'Saiu!'
+        }
+    </script>
+</body>
+
+</html>
