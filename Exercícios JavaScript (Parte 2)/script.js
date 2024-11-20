@@ -2,7 +2,7 @@ function carregar() {
     var msg = window.document.getElementById('msg')
     var img = window.document.getElementById('imagem')
     var data = new Date()
-    var hora =  data.getHours().toString().padStart(2, '0')
+    var hora = data.getHours().toString().padStart(2, '0')
     var minutos = data.getMinutes().toString().padStart(2, '0')
     var segundos = data.getSeconds().toString().padStart(2, '0')
     msg.innerHTML = `Agora são ${hora}:${minutos}:${segundos}`
@@ -17,7 +17,7 @@ function carregar() {
     } else {
         //BOA NOITE
         img.src = 'img/foto-noite.jpg'
-          document.body.style.backgroundImage = 'linear-gradient(rgb(13, 16, 21), rgb(17, 30, 36), rgb(59, 79, 86), rgb(67, 74, 82))'
+        document.body.style.backgroundImage = 'linear-gradient(rgb(13, 16, 21), rgb(17, 30, 36), rgb(59, 79, 86), rgb(67, 74, 82))'
     }
-    setInterval(carregar, 1000);
 }
+setInterval(carregar, 1000);
