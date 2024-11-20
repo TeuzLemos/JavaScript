@@ -2,8 +2,10 @@ function carregar() {
     var msg = window.document.getElementById('msg')
     var img = window.document.getElementById('imagem')
     var data = new Date()
-    var hora = data.getHours()
-    msg.innerHTML = `Agora são ${hora} horas.`
+    var hora =  data.getHours().toString().padStart(2, '0')
+    var minutos = data.getMinutes().toString().padStart(2, '0')
+    var segundos = data.getSeconds().toString().padStart(2, '0')
+    msg.innerHTML = `Agora são ${hora}:${minutos}:${segundos}`
     if (hora >= 0 && hora < 12) {
         //BOM DIA
         img.src = 'img/foto-manha.jpg'
@@ -17,4 +19,5 @@ function carregar() {
         img.src = 'img/foto-noite.jpg'
           document.body.style.backgroundImage = 'linear-gradient(rgb(13, 16, 21), rgb(17, 30, 36), rgb(59, 79, 86), rgb(67, 74, 82))'
     }
+    setInterval(carregar, 1000);
 }
